@@ -1,0 +1,20 @@
+# rules for signal violation
+rules:
+  -
+    label: string violation
+    value_type: String
+    expression: string < MEDIUM
+    description: |
+       value of string should not be below MEDIUM
+  -
+    label: integer violation
+    value_type: Integer
+    expression: integer > 240.00
+    description: |
+       value of integer should not be above 240.00
+  -
+    label: datetime violation
+    value_type: Datetime
+    expression: datetime > now
+    description: |
+      value of datetime should not be above todays date
